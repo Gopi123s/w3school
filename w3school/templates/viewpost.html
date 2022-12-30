@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block title %} {{urls.title}}{% endblock %}
+
+ 
+
+{% block content %} 
+<div class="container-fluid " style="background-color: aqua;">
+
+    <div  class= "my-5 col-md-2"style="width: 30px; background-color: brown; height: 500px;"></div>
+
+   
+
+    <!-- post content     -->
+<div class="container my-5 col-md-10" style="margin-right: 70px; margin-left: 200px; background-color: blue;">
+   <h1>{{urls.title}} - tutorial</h1> 
+
+        <div class="row col-md-12">
+        <img src="/media/{{urls.image}}" alt="" style="width: 800px;height: 400px;"  class="col-md-12">
+        </div>
+            <div class="mt-4">
+                    {{urls.desc|safe}}
+            </div>
+
+
+</div>
+
+  <!-- sidebar start here  -->
+ 
+  
+</div>
+
+
+
+
+
+<!-- {%  for i in fil %}
+<a href="/post/{{i.url}}">{{i.part_title}}</a>
+
+
+{% endfor %}
+
+{% endblock %} -->

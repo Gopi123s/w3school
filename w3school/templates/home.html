@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+{% block title %} Home page {% endblock %}
+
+ 
+
+{% block content %}
+<!-- <div class="container-fluid " style="width: 300px; height: 100px; background-color: aquamarine; margin-left: 3px; margin-top: 5px;">
+    
+        {% for c in courses %}
+        <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">{{c.title}}</li>
+          </ul>
+        </div>
+{% endfor %}
+    </div> -->
+    <div class="container mt-5">
+     <h1>Exolore our courses</h1>
+     <div class="row">
+          
+          {% for c in courses %}
+          <div class="px-4 mt-4">
+    <div class="card" style="width: 18rem;">
+     <img src="/media//{{c.image}}" class="card-img-top" alt="..." style="width:285px; height: 280px;">
+     <div class="card-body">
+       <h5 class="card-title">{{c.title}}</h5>
+       <p class="card-text"> {{c.desc|truncatewords:5|safe}}</p>
+       <a href="/blog/{{c.url}}" class="btn btn-primary ">View </a>
+     </div>
+   </div>
+</div>
+     
+{% endfor %}
+</div>
+
+</div>
+
+
+
+
+
+
+{% for p in part  %}
+
+     <h5>{{p.cat}}</h5>
+     <h3>{{p.part_title}}</h3>
+
+{% endfor %}
+
+{% for c in courses %}
+
+     <h5>{{c.title}}</h5>
+
+{% endfor %}
+
+
+
+{% endblock %}
+
+
